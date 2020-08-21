@@ -20,9 +20,15 @@ export default {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newScoreDeets)
+      body: JSON.stringify(newScoreDeets),
     })
 
     return await addScoreRes.json()
-  }
+  },
+
+  async getScores() {
+    const addScoreRes = await fetch("http://localhost:5000/scores/")
+
+    return await addScoreRes.json()
+  },
 }

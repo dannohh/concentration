@@ -1,6 +1,6 @@
 import client from './client';
 
-const addScore = async (newScore) => {
+export const addScore = async (newScore) => {
   try {
     return await client
       .db('scores')
@@ -11,4 +11,10 @@ const addScore = async (newScore) => {
   }
 };
 
-export default addScore;
+export const getScores = async () => {
+  try {
+    return await client.db('scores').collection('scores').find().toArray();
+  } catch (err) {
+    throw new Error(err);
+  }
+};
