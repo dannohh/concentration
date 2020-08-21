@@ -19,7 +19,7 @@ export const Concentration = () => {
 
   const handleForm = (event) => {
     event.preventDefault()
-    setPairsOfCards(event.target.elements[0].value || 4)
+    setPairsOfCards(Number(event.target.elements[0].value) || 4)
   }
 
   if (!pairsOfCards) {
