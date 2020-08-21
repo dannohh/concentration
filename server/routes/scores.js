@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { addScore, getScores } from '../db';
+import { addScore, getScores } from 'db';
 
 const router = new Router();
 
