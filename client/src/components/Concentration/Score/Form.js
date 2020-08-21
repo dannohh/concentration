@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-export const Form = ({gameOver}) => {
+import api from "api"
+
+export const Form = ({ gameOver, pairs, time }) => {
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+
+    const res = await api.addScore({ initials: event.target.elements[0].value, time: time, pairs: pairs})
+  }
+
   if (!gameOver) {
     return null
   }
@@ -9,6 +17,7 @@ export const Form = ({gameOver}) => {
   return (
     <form
       className="my-flex my-flex--align-center my-flex--justify-center"
+      onSubmit={handleSubmit}
     >
       <div>
         <label htmlFor="initials">Enter UR Initials:</label>

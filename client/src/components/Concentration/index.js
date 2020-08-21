@@ -29,7 +29,7 @@ export const Concentration = () => {
   return (
     <main>
       <Cards handler={handleCards} pairs={pairsOfCards} gameOver={gameOver} />
-      <Score gameOver={gameOver} toggle={toggleTimer} />
+      <Score gameOver={gameOver} pairs={pairsOfCards} toggle={toggleTimer} />
     </main>
   )
 }

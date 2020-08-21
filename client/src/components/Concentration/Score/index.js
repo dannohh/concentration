@@ -3,7 +3,7 @@ import React, { useEffect, useState, Fragment } from "react"
 
 import { Form } from "./Form"
 
-export const Score = ({ gameOver, toggle }) => {
+export const Score = ({ gameOver, pairs, toggle }) => {
   const [time, setTime] = useState(0)
 
   const convertSecondsToMinutesAndSeconds = (secs) =>
@@ -27,7 +27,11 @@ export const Score = ({ gameOver, toggle }) => {
         {convertSecondsToMinutesAndSeconds(time)}
       </p>
       {/* Prop drilling  */}
-      <Form gameOver={gameOver} />
+      <Form
+        gameOver={gameOver}
+        pairs={pairs}
+        time={convertSecondsToMinutesAndSeconds(time)}
+      />
     </Fragment>
   )
 }
