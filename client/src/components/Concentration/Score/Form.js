@@ -24,5 +24,7 @@ export const Form = ({gameOver}) => {
 }
 
 Form.propTypes = {
-  gameOver: PropTypes.bool
+  gameOver: PropTypes.bool,
+  pairs: PropTypes.number.isRequired,
+  time: PropTypes.string.isRequired
 }

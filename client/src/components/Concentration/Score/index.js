@@ -32,4 +32,4 @@ export const Score = ({ gameOver, toggle }) => {
   )
 }
 
-Score.propTypes = { gameOver: PropTypes.bool, toggle: PropTypes.bool }
+Score.propTypes = { gameOver: PropTypes.bool, pairs: PropTypes.number, toggle: PropTypes.bool }
