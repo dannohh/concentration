@@ -5,7 +5,7 @@ import { Cards } from "./Cards"
 import { Score } from "./Score"
 
 export const Concentration = () => {
-  const [pairsOfCards, setPairsOfCards] = useState("")
+  const [pairsOfCards, setPairsOfCards] = useState(0)
   const [toggleTimer, setToggleTimer] = useState(false)
   const [gameOver, setGameOver] = useState(false)
 
